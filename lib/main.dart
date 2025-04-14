@@ -75,9 +75,13 @@ class PaginaHome extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: 
+                  Padding(padding: const EdgeInsets.only(top: 150),
+                  child:Container(
                     width: 70,
-                    height: 250,
+                    height: 220,
                     decoration: BoxDecoration(
                     color: boxColor,
                     border: Border.all(
@@ -86,19 +90,21 @@ class PaginaHome extends StatelessWidget {
                     ),
                     ),
                     child: Center(
-                      child: Transform.rotate(
-                        angle: -pi / 2, 
-                        child: const Text(
-                          'TIMES ',
+                        child: RotatedBox(quarterTurns: -1,
+                        child: Text(
+                          'TIMES',
+                          textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20,
+                            fontSize: 50,
                             fontFamily: 'ConcertOne',
                             letterSpacing: 2,
                           ),
                         ),
                       ),
                     ),
+                  ),
+                  ),
                   ),
                 ],
               ),
