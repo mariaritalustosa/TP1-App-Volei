@@ -21,7 +21,7 @@ class PaginaHome extends StatelessWidget {
 
   final Color backgroundColor = const Color.fromARGB(255, 28, 185, 212);
   final Color boxColor = const Color.fromARGB(255, 62, 214, 214);  
-  final Color buttonColor = const Color.fromARGB(255, 12, 70, 158);  
+  final Color buttonColor = const Color.fromARGB(255, 12, 70, 158);
 
   @override
   Widget build(BuildContext context) {
@@ -111,6 +111,45 @@ class PaginaHome extends StatelessWidget {
                   ),
                 ],
               ),
+
+              const SizedBox(height: 50),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: const[
+                      Text(
+                        'SICRANOS',
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontFamily: 'ConcertOne',
+                          color: Colors.amberAccent,
+                        ),
+                      ),
+                      SizedBox( width: 20),
+                      Text(
+                        '10',
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontFamily: 'ConcertOne',
+                          color: Color.fromARGB(255, 12, 70, 158)
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                      RotatedBox(quarterTurns: 3,
+                      child: Text(
+                        'Jogadores',
+                        style: TextStyle(
+                          fontSize: 10,
+                          fontFamily: 'ConcertOne',
+                          color: Color.fromARGB(255, 12, 70, 158)
+                        ),
+                      ),)
+                    ],
+                  )
+                ],
+              )
             ],
           ),
         ),
