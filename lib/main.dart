@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +20,7 @@ class PaginaHome extends StatelessWidget {
   const PaginaHome({super.key});
 
   final Color backgroundColor = const Color.fromARGB(255, 28, 185, 212);
-  final Color boxColor = const Color.fromARGB(255, 23, 201, 201);  
+  final Color boxColor = const Color.fromARGB(255, 62, 214, 214);  
   final Color buttonColor = const Color.fromARGB(255, 12, 70, 158);  
 
   @override
@@ -31,6 +30,10 @@ class PaginaHome extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: buttonColor,
+        foregroundColor: Colors.white,
+        shape: RoundedRectangleBorder(borderRadius: 
+        BorderRadius.circular(50),
+        ),
         child: const Icon(Icons.add),
       ),
       body: SafeArea(
@@ -44,67 +47,67 @@ class PaginaHome extends StatelessWidget {
                 children: [
                   Image.asset('assets/ball.png', width: 60),
                   const SizedBox(width: 10),
-                 Container(
-                  padding: const EdgeInsets.only(right: 10),
-                  child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                 children: const [
-                 Text(
-                    'Volley',
-                     style: TextStyle(
-                     fontSize: 50,
-                     fontFamily: 'ConcertOne',
-                      color: Colors.white,
-                      height: 0.9,
-                   ),
-                 ),
-                    Text(
-                    'do fim de semana',
-                    style: TextStyle(
-                    fontSize: 12,
-                    fontFamily: 'ConcertOne',
-                    color: Colors.white,
-            ),
-          ),
-        ],
-      ),
-    ),
-  ],
-),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Align(
-                    alignment: Alignment.topLeft,
-                    child: 
-                  Padding(padding: const EdgeInsets.only(top: 150),
-                  child:Container(
-                    width: 70,
-                    height: 220,
-                    decoration: BoxDecoration(
-                    color: boxColor,
-                    border: Border.all(
-                      color: const Color.fromARGB(255, 78, 226, 231),
-                      width: 3,
-                    ),
-                    ),
-                    child: Center(
-                        child: RotatedBox(quarterTurns: -1,
-                        child: Text(
-                          'TIMES',
-                          textAlign: TextAlign.center,
+                  Container(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: const [
+                        Text(
+                          'Volley',
                           style: TextStyle(
-                            color: Colors.white,
                             fontSize: 50,
                             fontFamily: 'ConcertOne',
-                            letterSpacing: 2,
+                            color: Colors.white,
+                            height: 0.9,
+                          ),
+                        ),
+                        Text(
+                          'do fim de semana',
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontFamily: 'ConcertOne',
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 150), 
+                    child: Align(
+                      alignment: Alignment.topLeft, 
+                      child: Container(
+                        width: 70,
+                        height: 220,
+                        decoration: BoxDecoration(
+                          color: boxColor,
+                          border: Border.all(
+                            color: const Color.fromARGB(255, 78, 226, 231),
+                            width: 3,
+                          ),
+                        ),
+                        child: Center(
+                          child: RotatedBox(
+                            quarterTurns: -1,
+                            child: Text(
+                              'TIMES',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 50,
+                                fontFamily: 'ConcertOne',
+                                letterSpacing: 2,
+                              ),
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                  ),
                   ),
                 ],
               ),
