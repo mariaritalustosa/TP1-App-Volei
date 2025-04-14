@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
 class PaginaHome extends StatelessWidget {
   const PaginaHome({super.key});
 
-  final Color backgroundColor = const Color.fromARGB(255, 30, 168, 192);
+  final Color backgroundColor = const Color.fromARGB(255, 28, 185, 212);
   final Color boxColor = const Color.fromARGB(255, 19, 184, 184);  
   final Color buttonColor = const Color.fromARGB(255, 12, 70, 158);  
 
