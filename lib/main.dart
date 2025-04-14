@@ -166,6 +166,11 @@ class PaginaHome extends StatelessWidget {
                         'ZIRALDOS',
                         style: Styles.nomeTimes,
                       ),
+                      SizedBox(width: 20),
+                      Text(
+                        '4',
+                        style: Styles.qtdJogadores,
+                      ),
                       SizedBox(width: 10),
                       RotatedBox(quarterTurns: 3,
                       child: Text(
@@ -174,7 +179,26 @@ class PaginaHome extends StatelessWidget {
                       ),
                       ),
                     ],
-                  )
+                  ),
+                  const SizedBox(height: 10),
+                  Row(crossAxisAlignment: CrossAxisAlignment.center,
+                  children: const [
+                    Text(
+                      'SPARRINGS',
+                      style: Styles.nomeTimes,
+                    ),
+                    SizedBox(width: 20),
+                    Text(
+                      '5',
+                      style: Styles.qtdJogadores,
+                    ),
+                    SizedBox(height: 10),
+                    RotatedBox(quarterTurns: 3,
+                    child: Text(
+                      'Jogadores',
+                      style: Styles.jogadores,
+                    ),),
+                  ],),
                 ],
               )
             ],
@@ -184,7 +208,6 @@ class PaginaHome extends StatelessWidget {
     );
   }
 }
-
 class Cores{
   static const corAzul = Color.fromARGB(255, 12, 70, 158);
   static const amarelo = Colors.amberAccent;
