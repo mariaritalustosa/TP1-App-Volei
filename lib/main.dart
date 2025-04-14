@@ -114,38 +114,48 @@ class PaginaHome extends StatelessWidget {
 
               const SizedBox(height: 50),
               Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: const[
                       Text(
                         'SICRANOS',
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontFamily: 'ConcertOne',
-                          color: Colors.amberAccent,
-                        ),
+                        style: Styles.nomeTimes,
                       ),
-                      SizedBox( width: 20),
+                      SizedBox( width: 10),
                       Text(
-                        '10',
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontFamily: 'ConcertOne',
-                          color: Color.fromARGB(255, 12, 70, 158)
-                        ),
+                        '3',
+                        style: Styles.qtdJogadores,
+                      ),
+                      SizedBox(height: 10),
+                      RotatedBox(quarterTurns: 3,
+                      child: Text(
+                        'Jogadores',
+                        style: Styles.jogadores,
+                    ),  
+                      )
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: const[
+                      Text(
+                        'AUTOCONVIDADOS',
+                        style: Styles.nomeTimes,
+                      ),
+                      SizedBox(width: 20),
+                      Text(
+                        '3',
+                        style: Styles.qtdJogadores,
                       ),
                       SizedBox(width: 10),
                       RotatedBox(quarterTurns: 3,
                       child: Text(
                         'Jogadores',
-                        style: TextStyle(
-                          fontSize: 10,
-                          fontFamily: 'ConcertOne',
-                          color: Color.fromARGB(255, 12, 70, 158)
-                        ),
-                      ),)
+                        style: Styles.jogadores,
+                      ),),
                     ],
                   )
                 ],
@@ -156,4 +166,29 @@ class PaginaHome extends StatelessWidget {
       ),
     );
   }
+}
+
+class Cores{
+  static const corAzul = Color.fromARGB(255, 12, 70, 158);
+  static const amarelo = Colors.amberAccent;
+}
+
+class Styles{
+  static const TextStyle nomeTimes = TextStyle(
+    fontSize: 30,
+    fontFamily: 'ConcertOne',
+    color: Cores.amarelo,
+  );
+
+  static const TextStyle qtdJogadores = TextStyle(
+    fontSize: 30,
+    fontFamily: 'ConcertOne',
+    color: Cores.corAzul,
+  );
+
+  static const TextStyle jogadores = TextStyle(
+    fontSize: 10,
+    fontFamily: 'ConcertOne',
+    color: Cores.corAzul,
+  );
 }
