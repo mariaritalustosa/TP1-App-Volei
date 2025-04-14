@@ -137,7 +137,7 @@ class PaginaHome extends StatelessWidget {
                       )
                     ],
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 10),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: const[
@@ -156,6 +156,23 @@ class PaginaHome extends StatelessWidget {
                         'Jogadores',
                         style: Styles.jogadores,
                       ),),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: const[
+                      Text(
+                        'ZIRALDOS',
+                        style: Styles.nomeTimes,
+                      ),
+                      SizedBox(width: 10),
+                      RotatedBox(quarterTurns: 3,
+                      child: Text(
+                        'Jogadores',
+                        style: Styles.jogadores,
+                      ),
+                      ),
                     ],
                   )
                 ],
