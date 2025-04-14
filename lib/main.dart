@@ -21,7 +21,7 @@ class PaginaHome extends StatelessWidget {
   const PaginaHome({super.key});
 
   final Color backgroundColor = const Color.fromARGB(255, 28, 185, 212);
-  final Color boxColor = const Color.fromARGB(255, 19, 184, 184);  
+  final Color boxColor = const Color.fromARGB(255, 23, 201, 201);  
   final Color buttonColor = const Color.fromARGB(255, 12, 70, 158);  
 
   @override
@@ -76,9 +76,15 @@ class PaginaHome extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    width: 60,
-                    height: 180,
+                    width: 70,
+                    height: 250,
+                    decoration: BoxDecoration(
                     color: boxColor,
+                    border: Border.all(
+                      color: const Color.fromARGB(255, 78, 226, 231),
+                      width: 3,
+                    ),
+                    ),
                     child: Center(
                       child: Transform.rotate(
                         angle: -pi / 2, 
