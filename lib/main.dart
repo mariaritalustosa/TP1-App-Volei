@@ -117,18 +117,18 @@ class PaginaHome extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: const[
                       Text(
                         'SICRANOS',
                         style: Styles.nomeTimes,
                       ),
-                      SizedBox( width: 10),
+                      SizedBox( width: 5),
                       Text(
                         '3',
                         style: Styles.qtdJogadores,
                       ),
-                      SizedBox(height: 10),
+                      SizedBox(height: 5),
                       RotatedBox(quarterTurns: 3,
                       child: Text(
                         'Jogadores',
@@ -137,15 +137,15 @@ class PaginaHome extends StatelessWidget {
                       )
                     ],
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 5),
                   Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: const[
                       Text(
                         'AUTOCONVIDADOS',
                         style: Styles.nomeTimes,
                       ),
-                      SizedBox(width: 20),
+                      SizedBox(width: 5),
                       Text(
                         '3',
                         style: Styles.qtdJogadores,
@@ -158,15 +158,15 @@ class PaginaHome extends StatelessWidget {
                       ),),
                     ],
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 5),
                   Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: const[
                       Text(
                         'ZIRALDOS',
                         style: Styles.nomeTimes,
                       ),
-                      SizedBox(width: 20),
+                      SizedBox(width: 5),
                       Text(
                         '4',
                         style: Styles.qtdJogadores,
@@ -180,19 +180,20 @@ class PaginaHome extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 10),
-                  Row(crossAxisAlignment: CrossAxisAlignment.center,
+                  const SizedBox(height: 5),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
                   children: const [
                     Text(
                       'SPARRINGS',
                       style: Styles.nomeTimes,
                     ),
-                    SizedBox(width: 20),
+                    SizedBox(width: 5),
                     Text(
                       '5',
                       style: Styles.qtdJogadores,
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 5),
                     RotatedBox(quarterTurns: 3,
                     child: Text(
                       'Jogadores',
