@@ -76,6 +76,9 @@ class PaginaHome extends StatelessWidget {
                 ],
               ),
               Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [ 
+                Row(
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(top: 150), 
@@ -111,10 +114,8 @@ class PaginaHome extends StatelessWidget {
                   ),
                 ],
               ),
-
-              const SizedBox(height: 50),
               Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -201,7 +202,23 @@ class PaginaHome extends StatelessWidget {
                     ),),
                   ],),
                 ],
-              )
+              ),
+              ],
+              ),
+
+             
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+           
+              
+                
+                 
+                ],
+              ),
+              ),
             ],
           ),
         ),
@@ -222,7 +239,7 @@ class Styles{
   );
 
   static const TextStyle qtdJogadores = TextStyle(
-    fontSize: 30,
+    fontSize: 45,
     fontFamily: 'ConcertOne',
     color: Cores.corAzul,
   );
