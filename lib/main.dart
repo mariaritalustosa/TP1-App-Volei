@@ -1,3 +1,4 @@
+import 'package:app_volei/placar_geral.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -28,7 +29,12 @@ class PaginaHome extends StatelessWidget {
     return Scaffold(
       backgroundColor: backgroundColor,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+          context, 
+          MaterialPageRoute(builder: (context) => PlacarGeral()),
+          );
+        },
         backgroundColor: buttonColor,
         foregroundColor: Colors.white,
         shape: RoundedRectangleBorder(
@@ -115,7 +121,8 @@ class PaginaHome extends StatelessWidget {
                     ],
                   ),
                   Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.end
+                    ,
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
