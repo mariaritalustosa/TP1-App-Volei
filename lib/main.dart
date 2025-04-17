@@ -25,10 +25,15 @@ class PaginaHome extends StatelessWidget{
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 28, 185, 212),
       floatingActionButton: FloatingActionButton(onPressed: (){
-
       },
-      backgroundColor: Color.fromARGB(255, 12, 70, 158)),
-    )
+      backgroundColor: Color.fromARGB(255, 12, 70, 158),
+      foregroundColor: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(50),
+      ),
+      child: const Icon(Icons.add),
+      ),
+    );
   }
 }
 
