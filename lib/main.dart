@@ -49,7 +49,10 @@ class PaginaHome extends StatelessWidget{
               ],
             ),
             SizedBox(width: 30),
-            FinalWidget(),
+            JogoCasadol(),
+
+            SizedBox(height: 20),
+            BotaoIniciar()
           ],
         ),
       )),
@@ -65,8 +68,8 @@ class Titulo extends StatelessWidget{
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image.asset('assets/ball.png', width: 60),
-        const SizedBox(width: 10),
+        Image.asset('assets/ball.png', width: 50),
+        const SizedBox(width: 8),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const[
@@ -76,6 +79,7 @@ class Titulo extends StatelessWidget{
                 fontSize: 50,
                 fontFamily: 'ConcertOne',
                 color: Colors.white,
+                height: 0.9,
               ),
             ),
             Text(
@@ -170,6 +174,53 @@ class ListaTimes extends StatelessWidget{
   }
 }
 
+class JogoCasadol extends StatelessWidget {
+  const JogoCasadol({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: const [
+        Text(
+          'Jogos Casados',
+          style: TextStyle(
+            fontSize: 30,
+            color: Colors.white,
+            fontFamily: 'ConcertOne',
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class BotaoIniciar extends StatelessWidget{
+  const BotaoIniciar ({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(left: 2),
+      width: 60,
+      height: 220,
+      decoration: BoxDecoration(
+        color: Color.fromARGB(255, 12, 70, 158),
+        border: Border.all(
+          color: Color.fromARGB(255, 255, 255, 255),
+        ),
+      ),
+      child: const Center(
+        child: Text(
+          'INICIAR',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 50,
+            fontFamily: 'ConcertOne',
+          ),
+        ),),
+      );
+  }
+}
 
 
 class Cores {
