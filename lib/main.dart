@@ -49,7 +49,7 @@ class PaginaHome extends StatelessWidget{
               ],
             ),
             SizedBox(width: 30),
-            JogoCasadol(),
+            JogosCasados(),
 
             SizedBox(height: 20),
             BotaoIniciar()
@@ -105,11 +105,11 @@ class ContainerTimes extends StatelessWidget{
     return Container(
       margin: EdgeInsets.only(left: 2),
       width: 60,
-      height: 220,
+      height: 150,
       decoration: BoxDecoration(
         color: Color.fromARGB(255, 29, 206, 212),
         border: Border.all(
-          color: Color.fromARGB(255, 78, 226, 231),
+          color: Color.fromARGB(255, 119, 226, 230),
         ),
       ),
       child: const Center(
@@ -174,8 +174,8 @@ class ListaTimes extends StatelessWidget{
   }
 }
 
-class JogoCasadol extends StatelessWidget {
-  const JogoCasadol({super.key});
+class JogosCasados extends StatelessWidget {
+  const JogosCasados({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -198,15 +198,23 @@ class BotaoIniciar extends StatelessWidget{
   const BotaoIniciar ({super.key});
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: 
+        (context) => PlacarGeral()),
+        );
+      },
+
+    child: Container(
       margin: EdgeInsets.only(left: 2),
-      width: 60,
-      height: 220,
+      width: 150,
+      height: 60,
       decoration: BoxDecoration(
         color: Color.fromARGB(255, 12, 70, 158),
         border: Border.all(
           color: Color.fromARGB(255, 255, 255, 255),
         ),
+        borderRadius: BorderRadius.circular(20),
       ),
       child: const Center(
         child: Text(
@@ -214,11 +222,13 @@ class BotaoIniciar extends StatelessWidget{
           textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.white,
-            fontSize: 50,
+            fontSize: 30,
             fontFamily: 'ConcertOne',
           ),
-        ),),
-      );
+        ),
+        ),
+    ),
+    );
   }
 }
 
