@@ -125,6 +125,52 @@ class ContainerTimes extends StatelessWidget{
   }
 }
 
+class ListaTimes extends StatelessWidget{
+  const ListaTimes({super.key});
+
+  final List<Map<String, String>> times = const[
+    {'nome': 'SICRANOS', 'jogadores': '3'},
+    {'nome': 'AUTOCONVIDADOS', 'jogadores': '3'},
+    {'nome': 'ZIRALDOS', 'jogadores': '4'},
+    {'nome': 'SPARRINGS', 'jogadores': '5'},
+    ];
+
+    @override
+  Widget build(BuildContext context) {
+     return Column(
+      crossAxisAlignment: CrossAxisAlignment.end,
+      children: times.map((time) {
+        return Padding(
+          padding: const EdgeInsets.symmetric(vertical: 2.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Text(
+                time['nome']!,
+                style: Styles.nomeTimes,
+              ),
+              const SizedBox(width: 5),
+              Text(
+                time['jogadores']!,
+                style: Styles.qtdJogadores,
+              ),
+              const SizedBox(width: 5),
+              const RotatedBox(
+                quarterTurns: 3,
+                child: Text(
+                  'Jogadores',
+                  style: Styles.jogadores,
+                ),
+              ),
+            ],
+          ),
+        );
+      }).toList(),
+    );
+  }
+}
+
+
 
 class Cores {
   static const corAzul = Color.fromARGB(255, 12, 70, 158);
