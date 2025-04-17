@@ -33,6 +33,62 @@ class PaginaHome extends StatelessWidget{
       ),
       child: const Icon(Icons.add),
       ),
+      body: SafeArea(child: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: const[
+            Titulo(),
+            SizedBox(height: 20),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                ContainerTimes(),
+                SizedBox(width: 10),
+                Expanded(child: ListaTimes()),
+              ],
+            ),
+            SizedBox(width: 30),
+            FinalWidget(),
+          ],
+        ),
+      )),
+    );
+  }
+}
+
+class Titulo extends StatelessWidget{
+  const Titulo({super.key});
+  
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Image.asset('assets/ball.png', width: 60),
+        const SizedBox(width: 10),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const[
+            Text(
+              'Volley',
+              style: TextStyle(
+                fontSize: 50,
+                fontFamily: 'ConcertOne',
+                color: Colors.white,
+              ),
+            ),
+            Text(
+              'do fim de semana',
+              style: TextStyle(
+                fontSize: 12,
+                fontFamily: 'ConcertOne',
+                color: Colors.white,
+              ),
+            )
+          ],
+        )
+      ],
     );
   }
 }
