@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class PlacarGeral extends StatelessWidget{
     const PlacarGeral({super.key});
 
+
     @override
   Widget build(BuildContext context) {
     return Scaffold(
