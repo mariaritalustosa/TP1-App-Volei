@@ -93,6 +93,38 @@ class Titulo extends StatelessWidget{
   }
 }
 
+class ContainerTimes extends StatelessWidget{
+  const ContainerTimes({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(left: 2),
+      width: 60,
+      height: 220,
+      decoration: BoxDecoration(
+        color: Color.fromARGB(255, 29, 206, 212),
+        border: Border.all(
+          color: Color.fromARGB(255, 78, 226, 231),
+        ),
+      ),
+      child: const Center(
+        child: RotatedBox(quarterTurns: -1,
+        child: Text(
+          'TIMES',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 50,
+            fontFamily: 'ConcertOne',
+          ),
+        ),),
+      ),
+
+    );
+  }
+}
+
 
 class Cores {
   static const corAzul = Color.fromARGB(255, 12, 70, 158);
