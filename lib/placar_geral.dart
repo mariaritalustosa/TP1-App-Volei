@@ -38,7 +38,9 @@ class ColunasPrincipais extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(4, (_) => const Botoes())
-            ,
+            .expand((botao) => [botao, const SizedBox(height: 8)])
+            .toList()
+            ..removeLast(),
             ),
           ],
         ),
