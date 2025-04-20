@@ -11,15 +11,24 @@ class PlacarGeral extends StatelessWidget{
       SystemChrome.setPreferredOrientations([
         DeviceOrientation.landscapeLeft
         ]);
-        return Scaffold(
-        backgroundColor: Color.fromARGB(255, 28, 185, 212),
-         body: Column(
-        children: const [
-          ColunasPrincipais(),
-          BotaoPlacarGeral(),
-        ]
-      ),
-    );
+      return Scaffold(
+  backgroundColor: Color.fromARGB(255, 28, 185, 212),
+  body: SafeArea(
+    child: Column(
+      children: const [
+       Expanded(
+          child: SingleChildScrollView(
+            child: ColunasPrincipais(),
+          ),
+        ),
+        TempoDeJogo(),
+        SizedBox(height: 8),
+        BotaoPlacarGeral(),
+        SizedBox(height: 12)
+      ],
+    ),
+  ),
+);
   }
 }
 
@@ -29,7 +38,7 @@ class ColunasPrincipais extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 40),
+      padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 17),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -46,7 +55,7 @@ class ColunasPrincipais extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     const Botoes(),
-                    const SizedBox(width: 13),
+                    const SizedBox(width: 11),
                     Text(
                       textoColunaEsquerda[index], 
                       style: const TextStyle(fontSize: 25, color: Colors.white, fontFamily: 'ConcertOne'),
@@ -72,7 +81,7 @@ class ColunasPrincipais extends StatelessWidget {
                       textoColunaDireita[index], 
                       style: const TextStyle(fontSize: 25, color: Colors.white, fontFamily: 'ConcertOne'),
                     ),
-                    const SizedBox(width: 13),
+                    const SizedBox(width: 11),
                     const Botoes(),
                   ],
                 ),
@@ -81,6 +90,27 @@ class ColunasPrincipais extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class TempoDeJogo extends StatelessWidget{
+  const TempoDeJogo({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: const[
+        Text(
+          'Tempo de Jogo: 1:14:00',
+          style: TextStyle(
+            fontSize: 15,
+            fontFamily: 'ConcertOne',
+            color: Colors.white,
+          ),
+        ),
+      ],
     );
   }
 }
