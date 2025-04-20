@@ -204,21 +204,20 @@ class BotaoIniciar extends StatelessWidget{
         (context) => PlacarGeral()),
         );
       },
-
     child: Container(
       margin: EdgeInsets.only(left: 2),
-      width: 150,
+      width: 250,
       height: 60,
       decoration: BoxDecoration(
         color: Color.fromARGB(255, 12, 70, 158),
         border: Border.all(
           color: Color.fromARGB(255, 255, 255, 255),
         ),
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(15),
       ),
       child: const Center(
         child: Text(
-          'INICIAR',
+          'Iniciar',
           textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.white,
