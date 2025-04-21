@@ -65,6 +65,11 @@ class ColunasPrincipais extends StatelessWidget {
               );
             }),
           ),
+          //quadra
+          Container(
+            width: 200,
+            height: 100,
+          ),
           //coluna direita
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -153,7 +158,6 @@ class BotaoPlacarGeral extends StatelessWidget{
     );
   }
 }
-
 
 
 class Botoes extends StatelessWidget{
