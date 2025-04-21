@@ -70,7 +70,7 @@ class ColunasPrincipais extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: List.generate(4, (index) {
-              // Lista de palavras para a coluna direita
+              //lista de palavras para a coluna direita
               List<String> textoColunaDireita = ['ACE', 'ATAQUE', 'BLOQUEIO', 'ERRO'];
               return Padding(
                 padding: const EdgeInsets.symmetric(vertical: 6.0),
