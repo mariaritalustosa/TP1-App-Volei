@@ -21,7 +21,7 @@ class PlacarParcial extends StatelessWidget{
             child: ColunasPrincipais(),
           ),
         ),
-        TempoDeJogo(),
+        TempoDeJogo(fontSize: 15),
         SizedBox(height: 8),
         BotaoPlacarGeral(),
         SizedBox(height: 12)
@@ -95,17 +95,19 @@ class ColunasPrincipais extends StatelessWidget {
 }
 
 class TempoDeJogo extends StatelessWidget{
-  const TempoDeJogo({super.key});
+  final double fontSize;
+
+  const TempoDeJogo({super.key, required this.fontSize});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
-      children: const[
+      children: [
         Text(
           'Tempo de Jogo: 1:14:00',
           style: TextStyle(
-            fontSize: 15,
+            fontSize: fontSize,
             fontFamily: 'ConcertOne',
             color: Colors.white,
           ),

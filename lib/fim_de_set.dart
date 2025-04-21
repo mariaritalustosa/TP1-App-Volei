@@ -14,9 +14,12 @@ class FimDeSet extends StatelessWidget{
         return Scaffold(
         backgroundColor: Color.fromARGB(255, 28, 185, 212),
          body: Column(
-        children: const [
+        children: [
           ColunasPrincipais(),
-          TempoDeJogo(),
+          Spacer(),
+          TempoDeJogo(
+            fontSize: 25,
+          ),
         ]
       ),
     );
