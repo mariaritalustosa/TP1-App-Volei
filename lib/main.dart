@@ -1,4 +1,4 @@
-import 'package:app_volei/placar_geral.dart';
+import 'package:app_volei/placar_parcial.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -201,7 +201,7 @@ class BotaoIniciar extends StatelessWidget{
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: 
-        (context) => PlacarGeral()),
+        (context) => PlacarParcial()),
         );
       },
     child: Container(
