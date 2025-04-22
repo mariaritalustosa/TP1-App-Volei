@@ -67,8 +67,49 @@ class ColunasPrincipais extends StatelessWidget {
           ),
           //quadra
           Container(
-            width: 200,
-            height: 100,
+            width: 400,
+            height: 150,
+            margin: const EdgeInsets.symmetric(horizontal: 15),
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 255, 126, 52),
+               border: Border.all(color: Colors.white, width: 3),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    Image.asset('assets/ball.png',
+                    width: 50,
+                    height: 50,
+                    ),
+                    const SizedBox(height: 1),
+                    const Text(
+                      '12',
+                      style: TextStyle(
+                        fontSize: 40,
+                        color: Colors.white,
+                        fontFamily: 'ConcertOne',
+                      ),
+                    ),
+                  ],
+                ),
+                Container(
+                  width: 5,
+                  height: 150,
+                  color: Colors.white,
+                ),
+                const Text(
+                  '22',
+                  style: TextStyle(
+                    fontFamily: 'ConcertOne',
+                    fontSize: 40,
+                    color: Colors.white,
+                  ),
+                )
+              ],
+            )
           ),
           //coluna direita
           Column(
