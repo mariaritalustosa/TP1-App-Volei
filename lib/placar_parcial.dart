@@ -2,6 +2,7 @@ import 'package:app_volei/fim_de_set.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+
 class PlacarParcial extends StatelessWidget{
     const PlacarParcial({super.key});
 
@@ -17,6 +18,7 @@ class PlacarParcial extends StatelessWidget{
         leading: IconButton(
           icon: const Icon(Icons.arrow_back), 
           onPressed: () {
+          Navigator.pop(context);
           },
         ),
         actions: [
