@@ -25,6 +25,7 @@ class PlacarParcial extends StatelessWidget{
         actions: [
           IconButton(
             icon: const Icon(Icons.settings), 
+            color: Colors.white,
             onPressed: () {
               
             },

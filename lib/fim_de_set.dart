@@ -12,13 +12,27 @@ class FimDeSet extends StatelessWidget{
         DeviceOrientation.landscapeLeft
         ]);
         return Scaffold(
-        backgroundColor: Color.fromARGB(255, 28, 185, 212),
-         body: Column(
-        children: [
+          appBar: AppBar(
+            backgroundColor:  Color.fromARGB(255, 28, 185, 212),
+            leading: IconButton(onPressed: (){
+              Navigator.pop(context);
+            }, icon: const Icon(Icons.arrow_back),
+            color: Colors.white,
+            ),
+            actions: [
+              IconButton(onPressed: (){},
+               icon: Icon(Icons.settings),
+               color: Colors.white,
+               ),
+            ],
+          ),
+          backgroundColor: Color.fromARGB(255, 28, 185, 212),
+          body: Column(
+          children: [
           ColunasPrincipais(),
           Spacer(),
           TempoDeJogo(
-            fontSize: 25,
+            fontSize: 17,
           ),
         ]
       ),
