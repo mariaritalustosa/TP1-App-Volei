@@ -29,7 +29,7 @@ class PlacarParcial extends StatelessWidget{
     ),
   ),
 );
-}
+  }
 }
 
 class ColunasPrincipais extends StatelessWidget {
@@ -39,175 +39,106 @@ class ColunasPrincipais extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 17),
-      child: Column(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          //times acima da quadra
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Column(
-                children: [
-                  FloatingActionButton(
-                    heroTag: 'TimeA',
-                    onPressed: () {},
-                    backgroundColor: const Color.fromARGB(255, 171, 255, 241),
-                    child: const Text(
-                      'A',
-                      style: TextStyle(
-                        fontFamily: 'ConcertOne',
-                        fontSize: 13,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 5),
-                  const Text(
-                    'Time A',
-                    style: TextStyle(
-                      fontFamily: 'ConcertOne',
-                      fontSize: 15,
-                      color: Color.fromARGB(255, 12, 70, 158),
-                    ),
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  FloatingActionButton(
-                    heroTag: 'TimeB',
-                    onPressed: () {},
-                    backgroundColor: const Color.fromARGB(255, 171, 255, 241),
-                    child: const Text(
-                      'B',
-                      style: TextStyle(
-                        fontSize: 13,
-                        fontFamily: 'ConcertOne',
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 5),
-                  const Text(
-                    'Time B',
-                    style: TextStyle(
-                      fontFamily: 'ConcertOne',
-                      fontSize: 15,
-                      color: Color.fromARGB(255, 12, 70, 158),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          const SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              //coluna esquerda
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: List.generate(4, (index) {
-                  List<String> textoColunaEsquerda = ['ACE', 'ATAQUE', 'BLOQUEIO', 'ERRO'];
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 6.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        const Botoes(),
-                        const SizedBox(width: 11),
-                        Text(
-                          textoColunaEsquerda[index],
-                          style: const TextStyle(
-                            fontSize: 25,
-                            color: Colors.white,
-                            fontFamily: 'ConcertOne',
-                          ),
-                        ),
-                      ],
-                    ),
-                  );
-                }),
-              ),
-              //quadra
-              Container(
-                width: 400,
-                height: 150,
-                margin: const EdgeInsets.symmetric(horizontal: 15),
-                decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 255, 126, 52),
-                  border: Border.all(color: Colors.white, width: 3),
-                ),
+          //coluna esquerda
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: List.generate(4, (index) {
+              //lista de palavras para a coluna esquerda
+              List<String> textoColunaEsquerda = ['ACE', 'ATAQUE', 'BLOQUEIO', 'ERRO'];
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 6.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
                   children: [
-                    Column(
-                      children: [
-                        Image.asset(
-                          'assets/ball.png',
-                          width: 50,
-                          height: 50,
-                        ),
-                        const SizedBox(height: 1),
-                        const Text(
-                          '12',
-                          style: TextStyle(
-                            fontSize: 40,
-                            color: Colors.white,
-                            fontFamily: 'ConcertOne',
-                          ),
-                        ),
-                      ],
+                    const Botoes(),
+                    const SizedBox(width: 11),
+                    Text(
+                      textoColunaEsquerda[index], 
+                      style: const TextStyle(fontSize: 25, color: Colors.white, fontFamily: 'ConcertOne'),
                     ),
-                    Container(
-                      width: 5,
-                      height: 150,
-                      color: Colors.white,
+                  ],
+                ),
+              );
+            }),
+          ),
+          //quadra
+          Container(
+            width: 400,
+            height: 150,
+            margin: const EdgeInsets.symmetric(horizontal: 15),
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 255, 126, 52),
+               border: Border.all(color: Colors.white, width: 3),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    Image.asset('assets/ball.png',
+                    width: 50,
+                    height: 50,
                     ),
+                    const SizedBox(height: 1),
                     const Text(
-                      '22',
+                      '12',
                       style: TextStyle(
-                        fontFamily: 'ConcertOne',
                         fontSize: 40,
                         color: Colors.white,
+                        fontFamily: 'ConcertOne',
                       ),
                     ),
                   ],
                 ),
-              ),
-              //coluna direita
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: List.generate(4, (index) {
-                  List<String> textoColunaDireita = ['ACE', 'ATAQUE', 'BLOQUEIO', 'ERRO'];
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 6.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(
-                          textoColunaDireita[index],
-                          style: const TextStyle(
-                            fontSize: 25,
-                            color: Colors.white,
-                            fontFamily: 'ConcertOne',
-                          ),
-                        ),
-                        const SizedBox(width: 11),
-                        const Botoes(),
-                      ],
+                Container(
+                  width: 5,
+                  height: 150,
+                  color: Colors.white,
+                ),
+                const Text(
+                  '22',
+                  style: TextStyle(
+                    fontFamily: 'ConcertOne',
+                    fontSize: 40,
+                    color: Colors.white,
+                  ),
+                )
+              ],
+            )
+          ),
+          //coluna direita
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: List.generate(4, (index) {
+              //lista de palavras para a coluna direita
+              List<String> textoColunaDireita = ['ACE', 'ATAQUE', 'BLOQUEIO', 'ERRO'];
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 6.0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      textoColunaDireita[index], 
+                      style: const TextStyle(fontSize: 25, color: Colors.white, fontFamily: 'ConcertOne'),
                     ),
-                  );
-                }),
-              ),
-            ],
+                    const SizedBox(width: 11),
+                    const Botoes(),
+                  ],
+                ),
+              );
+            }),
           ),
         ],
       ),
     );
   }
 }
-
 
 class TempoDeJogo extends StatelessWidget{
   final double fontSize;
