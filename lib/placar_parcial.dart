@@ -17,6 +17,7 @@ class PlacarParcial extends StatelessWidget{
         backgroundColor: Color.fromARGB(255, 28, 185, 212),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back), 
+          color: Colors.white,
           onPressed: () {
           Navigator.pop(context);
           },
