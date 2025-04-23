@@ -39,7 +39,60 @@ class ColunasPrincipais extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 17),
-      child: Row(
+      child: Column(
+        children: [
+          // Botões dos times acima da quadra
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Column(
+                children: [
+                  FloatingActionButton(
+                    heroTag: 'TimeA',
+                    onPressed: () {},
+                    backgroundColor: const Color.fromARGB(255, 171, 255, 241),
+                    child: const Text('A', style: TextStyle(
+                      fontFamily: 'ConcertOne',
+                      fontSize: 13,
+                    )),
+                  ),
+                  const SizedBox(height: 5),
+                  const Text(
+                    'Time A',
+                    style: TextStyle(
+                      fontFamily: 'ConcertOne',
+                      fontSize: 15,
+                      color: Color.fromARGB(255, 12, 70, 158),
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  FloatingActionButton(
+                    heroTag: 'TimeB',
+                    onPressed: () {},
+                    backgroundColor: const Color.fromARGB(255, 171, 255, 241),
+                    child: const Text('B', style: TextStyle(
+                      fontSize: 13,
+                      fontFamily: 'ConcertOne',
+                    )),
+                  ),
+                  const SizedBox(height: 5),
+                  const Text(
+                    'Time B',
+                    style: TextStyle(
+                      fontFamily: 'ConcertOne',
+                      fontSize: 15,
+                      color: Color.fromARGB(255, 12, 70, 158),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+  const SizedBox(height: 10),
+      Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           //coluna esquerda
