@@ -11,9 +11,25 @@ class PlacarParcial extends StatelessWidget{
       SystemChrome.setPreferredOrientations([
         DeviceOrientation.landscapeLeft
         ]);
-      return Scaffold(
-  backgroundColor: Color.fromARGB(255, 28, 185, 212),
-  body: SafeArea(
+         return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 28, 185, 212),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back), 
+          onPressed: () {
+          },
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.settings), 
+            onPressed: () {
+              
+            },
+          ),
+        ],
+      ),
+      backgroundColor: Color.fromARGB(255, 28, 185, 212),
+     body: SafeArea(
     child: Column(
       children: const [
        Expanded(
@@ -28,7 +44,7 @@ class PlacarParcial extends StatelessWidget{
       ],
     ),
   ),
-);
+        );
   }
 }
 
