@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:app_volei/placar_parcial.dart';
+import 'package:app_volei/placar_geral.dart';
 
 class FimDeSet extends StatelessWidget{
     const FimDeSet({super.key});
@@ -35,6 +36,95 @@ class FimDeSet extends StatelessWidget{
             fontSize: 17,
           ),
         ]
+      ),
+    );
+  }
+}
+
+void placarGanhador(BuildContext context) {
+  Navigator.of(context).push(
+    PageRouteBuilder(
+      opaque: false,
+      pageBuilder: (_, __, ___) => const Placar(),
+    ),
+  );
+}
+
+class Placar extends StatelessWidget {
+  const Placar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black.withValues(alpha: 0.2), 
+      body: Center(
+        child: Container(
+          width: 550, 
+          height: 400,
+          decoration: BoxDecoration(
+            color: const Color.fromARGB(255, 179, 246, 248).withValues(alpha: 0.9),
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: const Color.fromARGB(255, 255, 255, 255), width: 2),
+          ),
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              const Text(
+                'FIM DE SET',
+                style: TextStyle(
+                  fontSize: 24,
+                   fontFamily: 'ConcerOne',
+                  color: Color.fromARGB(255, 12, 70, 158),
+                ),
+              ),
+              const Text(
+                'Autoconvidados',
+                style: TextStyle(
+                  fontSize: 40,
+                  fontFamily: 'ConcertOne',
+                  color: Color.fromARGB(255, 12, 70, 158),
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.pop(context); 
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 12, 70, 158),
+                      shape: RoundedRectangleBorder(
+                        side: const BorderSide(color: Colors.white, width: 2),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    child: const Text('Terminar', style: TextStyle(
+                      fontFamily: 'ConcertOne',
+                    ),),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => PlacarGeral()));
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 12,70, 158),
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(color: Colors.white, width: 2),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    child: const Text(
+                      'Novo Set',
+                      style: TextStyle(color: Color.fromARGB(255, 255, 184, 31)),
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
