@@ -70,18 +70,18 @@ class Placar extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              const Text(
+               Text(
                 'FIM DE SET',
                 style: TextStyle(
-                  fontSize: 24,
-                   fontFamily: 'ConcerOne',
+                  fontSize: 30,
+                   fontFamily: 'ConcertOne',
                   color: Color.fromARGB(255, 12, 70, 158),
                 ),
               ),
               const Text(
                 'Autoconvidados',
                 style: TextStyle(
-                  fontSize: 40,
+                  fontSize: 60,
                   fontFamily: 'ConcertOne',
                   color: Color.fromARGB(255, 12, 70, 158),
                 ),
@@ -95,13 +95,15 @@ class Placar extends StatelessWidget {
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color.fromARGB(255, 12, 70, 158),
+                      minimumSize: Size(100, 80),
                       shape: RoundedRectangleBorder(
                         side: const BorderSide(color: Colors.white, width: 2),
                         borderRadius: BorderRadius.circular(12),
                       ),
                     ),
-                    child: const Text('Terminar', style: TextStyle(
+                    child: Text('Terminar', style: TextStyle(
                       fontFamily: 'ConcertOne',
+                      color: Colors.white,
                     ),),
                   ),
                   ElevatedButton(
@@ -110,6 +112,7 @@ class Placar extends StatelessWidget {
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color.fromARGB(255, 12,70, 158),
+                      minimumSize: Size(100, 80),
                       shape: RoundedRectangleBorder(
                         side: BorderSide(color: Colors.white, width: 2),
                         borderRadius: BorderRadius.circular(12),

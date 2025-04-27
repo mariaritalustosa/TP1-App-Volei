@@ -23,13 +23,29 @@ class PlacarGeral extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.settings),
+            icon: const Icon(Icons.show_chart),
             color: Colors.white,
             onPressed: () {},
           ),
         ],
       ),
       backgroundColor: const Color.fromARGB(255, 28, 185, 212),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          SizedBox(height: 20),
+          Center(
+            child: Text(
+              'PLACAR GERAL',
+              style: TextStyle(
+                fontFamily: 'ConcertOne',
+                fontSize: 30,
+                color: Color.fromARGB(244, 12, 70, 158),
+              ),
+            ),
+          )
+        ],
+      ),
   );
   }
 }
