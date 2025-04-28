@@ -25,7 +25,11 @@ class PlacarGeral extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.show_chart),
             color: Colors.white,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder:
+              (context) => Estatisticas()),
+              );
+            },
           ),
         ],
       ),
@@ -86,7 +90,7 @@ class PlacarGeral extends StatelessWidget {
                           times['time'],
                           style: TextStyle(
                             fontFamily: 'ConcertOne',
-                            fontSize: 15,
+                            fontSize: 20,
                             color: Colors.white,
                           ),
                         ),
@@ -95,7 +99,7 @@ class PlacarGeral extends StatelessWidget {
                           '${times['pontos']}',
                           style: TextStyle(
                             fontFamily: 'ConcertOne',
-                            fontSize: 20,
+                            fontSize: 25,
                             color: times['pontos'] == 25 ? Color.fromARGB(255, 12, 70, 158) : Colors.amber,
                           ),
                         ),
@@ -124,14 +128,46 @@ class PlacarGeral extends StatelessWidget {
                           color: Color.fromARGB(255, 12, 70, 158),
                         ),
                       ),
-                    )
+                    ),
+                    SizedBox(height: 5),
+                    ...[
+                      {'time': 'Sparrings', 'pontos': 10},
+                      {'time': 'Sicranos', 'pontos': 10},
+                      {'time': 'Autoconvidados', 'pontos': 25},
+                      {'time': 'Autoconvidados', 'pontos': 10},
+                    ].map((Map<String, dynamic> times) => Padding(
+                    padding: 
+                    EdgeInsets.symmetric(vertical: 4),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(child: Text(
+                          times['time'],
+                          style: TextStyle(
+                            fontFamily: 'ConcertOne',
+                            fontSize: 20,
+                            color: Colors.white,
+                          ),
+                        ),
+                        ),
+                        Text(
+                          '${times['pontos']}',
+                          style: TextStyle(
+                            fontFamily: 'ConcertOne',
+                            fontSize: 25,
+                            color: times['pontos'] == 25 ? Color.fromARGB(255, 12, 70, 158) : Colors.amber,
+                          ),
+                        ),
+                      ],
+                    ),
+                    )),
                   ],
-                ))
+                ),
+                ),
+                  ],
+                ),),
               ],
             ),
-          )
-        ],
-      ),
-  );
+          );
   }
 }
