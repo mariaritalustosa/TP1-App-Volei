@@ -105,7 +105,28 @@ class PlacarGeral extends StatelessWidget {
                   ],
                 ),
                 ),
-                Container()
+                Container(
+                  width: 5,
+                  height: double.infinity,
+                  color: Colors.white,
+                ),
+                Expanded(child: 
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CircleAvatar(
+                      backgroundColor: Color.fromARGB(255, 179, 246, 248),
+                      child: Text(
+                        'B',
+                        style: TextStyle(
+                          fontFamily: 'ConcertOne',
+                          fontSize: 20,
+                          color: Color.fromARGB(255, 12, 70, 158),
+                        ),
+                      ),
+                    )
+                  ],
+                ))
               ],
             ),
           )
