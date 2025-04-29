@@ -1,3 +1,4 @@
+import 'package:app_volei/estatisticas.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -56,6 +57,19 @@ class PlacarGeral extends StatelessWidget {
               color: Color.fromARGB(255, 255, 126, 52),
               border: Border.all(color: Colors.white, width: 4),
             ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: List.generate(4, (_) => Padding(padding:
+                  EdgeInsets.symmetric(vertical: 5),
+                  child: Icon(Icons.bar_chart_rounded, color: Colors.white, size: 15,),)),
+                )
+              ],
+            ),
+            SizedBox(width: 10),
+            
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -164,6 +178,10 @@ class PlacarGeral extends StatelessWidget {
                   ],
                 ),
                 ),
+                Padding(padding: 
+                EdgeInsets.only(left: 10),
+                child: Column(),
+                )
                   ],
                 ),),
               ],
